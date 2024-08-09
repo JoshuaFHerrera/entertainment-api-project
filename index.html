@@ -5,8 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entertainment API Project</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/icon.png" />
+    <link rel="stylesheet" href="" />
   </head>
   <body>
+    <!-- NAV BAR -->
+    <nav>
+      <!-- Left Side Links -->
+      <div id="hamburger-menu">
+        <div id="hamburger-container">
+          <img id="hamburger-icon" src="./assets/hamburger.png" alt="" />
+        </div>
+      </div>
+      <!-- logo -->
+      <div id="logo-container">
+        <img id="logo" src="./assets/logo.png" alt="" />
+      </div>
+      <!-- search bar -->
+      <div id="search-container">
+        <img id="search" src="./assets/search.png" alt="" />
+      </div>
+    </nav>
+
+    <!-- TRENDING -->
+    <section id="trending">
+      <div id="trending-wrapper">
+        <!-- left side info -->
+        <div id="info-container">
+          <div id="info-title">
+            <p>Trending this Week!</p>
+            <img src="./assets/fire.png" alt="" />
+          </div>
+          <div id="info-caption">
+            <p id="info-caption-1">
+              Take a look at the movies that audiences have been loving
+              recently!
+            </p>
+            <p id="info-caption-2">
+              More movies and categories down below. Scroll down to explore!
+            </p>
+          </div>
+        </div>
+        <!-- right side movies -->
+        <div id="slides-container">
+          <div id="slides-wrapper"></div>
+          <div id="slides-caption-container">
+            <p>Scroll for more&nbsp;&nbsp;&nbsp;></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPUP -->
+    <div class="popup" id="popup">
+      <div class="overlay"></div>
+      <!-- popup itself -->
+      <div class="popup-content">
+        <!-- left white side for poster and main info -->
+        <div class="popup-poster">
+          <!-- blue box for rating, age rating and duration -->
+          <div class="main-info">
+            <div class="rating">
+              <img class="rating-img" src="./assets/star.png" alt="" />
+              <p>10/10</p>
+            </div>
+            <div class="age-rating">
+              <img class="age-img" src="./assets/age-rating.png" alt="" />
+              <p>18+</p>
+            </div>
+            <div class="duration">
+              <img class="duration-img" src="./assets/time.png" alt="" />
+              <p>120 min</p>
+            </div>
+          </div>
+        </div>
+        <!-- right blue side for extra info -->
+        <div class="popup-info">
+          <img
+            id="exit"
+            onclick="closePopup()"
+            src="./assets/exit.png"
+            alt=""
+          />
+        </div>
+        <!-- <h2></h2>
+        <p></p> -->
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
