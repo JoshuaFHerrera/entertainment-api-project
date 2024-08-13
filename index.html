@@ -9,21 +9,73 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <!-- NAV BAR -->
-    <nav>
-      <!-- Left Side Links -->
-      <div id="hamburger-menu">
-        <div id="hamburger-container">
-          <img id="hamburger-icon" src="./assets/hamburger.png" alt="" />
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+      <div id="sidebar-logo-wrapper">
+        <img
+          onclick="closeSidebar()"
+          id="sidebar-logo"
+          src="./assets/hamburger.png"
+          alt=""
+        />
+      </div>
+      <div id="sidebar-title-wrapper">
+        <h1 id="sidebar-title">Categories</h1>
+      </div>
+      <div id="categories-container">
+        <div id="categories">
+          <div class="sidebar-category-container">
+            <a id="trending-a" href="#trending" class="category">TRENDING</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a id="popular-a" href="#popular" class="category">POPULAR</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a id="favorited-a" href="#favorited" class="category">FAVORITED</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a id="anticipated-a" href="#anticipated" class="category"
+              >HIGHLY ANTICIPATED</a
+            >
+          </div>
+          <hr id="category-border" />
+          <div id="action-a" class="sidebar-category-container">
+            <a href="#action" class="category">ACTION</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a href="#adventure" class="category">ADVENTURE</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a href="#animation" class="category">ANIMATION</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a href="#comedy" class="category">COMEDY</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a href="#documentar" class="category">DOCUMENTARY</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a href="#romance" class="category">ROMANCE</a>
+          </div>
+          <div class="sidebar-category-container">
+            <a href="#western" class="category">WESTERN</a>
+          </div>
         </div>
       </div>
-      <!-- logo -->
+    </div>
+
+    <!-- NAV BAR -->
+    <nav class="nav">
       <div id="logo-container">
-        <img id="logo" src="./assets/logo.png" alt="" />
+        <a href="#trending"><img id="logo" src="./assets/logo.png" alt="" /></a>
       </div>
-      <!-- search bar -->
-      <div id="search-container">
-        <img id="search" src="./assets/search.png" alt="" />
+      <div id="sidebar-icon-container">
+        <img
+          onclick="openSidebar()"
+          id="sidebar-icon"
+          src="./assets/hamburger.png"
+          alt=""
+        />
       </div>
     </nav>
 
@@ -35,7 +87,10 @@
           <div id="info-container">
             <div id="info-title">
               <p>Trending this Week!</p>
-              <img src="./assets/fire.png" alt="" />
+              <img
+                src="https://media.tenor.com/F3xUrsjCSzUAAAAi/fire.gif"
+                alt=""
+              />
             </div>
             <div id="info-caption">
               <p id="info-caption-1">
@@ -50,16 +105,16 @@
           <!-- right side movies -->
           <div id="slides-container">
             <div id="slides-wrapper">
-              <img id="trending-0" src="" alt="" />
-              <img id="trending-1" src="" alt="" />
-              <img id="trending-2" src="" alt="" />
-              <img id="trending-3" src="" alt="" />
-              <img id="trending-4" src="" alt="" />
-              <img id="trending-5" src="" alt="" />
-              <img id="trending-6" src="" alt="" />
-              <img id="trending-7" src="" alt="" />
-              <img id="trending-8" src="" alt="" />
-              <img id="trending-9" src="" alt="" />
+              <img id="trending-0" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-1" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-2" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-3" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-4" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-5" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-6" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-7" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-8" src="./assets/Unavailable.png" alt="" />
+              <img id="trending-9" src="./assets/Unavailable.png" alt="" />
             </div>
             <div id="slides-caption-container">
               <p>Scroll for more&nbsp;&nbsp;&nbsp;></p>
@@ -69,164 +124,680 @@
       </section>
 
       <!-- POPULAR -->
-      <section id="popular">
-        <h1>POPULAR</h1>
-        <div id="popular-container">
+      <section id="popular" class="category-section">
+        <h1 class="category-h1">POPULAR</h1>
+        <div id="popular-container" class="category-container">
           <img
+            class="category-poster"
             id="popular-0"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-1"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-2"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-3"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-4"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-5"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-6"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-7"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
+            class="category-poster"
             id="popular-8"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            src="./assets/Unavailable.png"
             alt=""
           />
-          <img id="popular-9"
-          src=https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-          alt="" />
+          <img
+            class="category-poster"
+            id="popular-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
         </div>
       </section>
-      <section id="popular">
-        <h1>POPULAR</h1>
-        <div id="popular-container">
+
+      <!-- FAVORITED -->
+      <section id="favorited" class="category-section">
+        <h1 class="category-h1">FAVOURITED THIS WEEK</h1>
+        <div id="favorited-container" class="category-container">
           <img
-            id="popular-0"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-0"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-1"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-1"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-2"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-2"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-3"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-3"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-4"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-4"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-5"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-5"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-6"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-6"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-7"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-7"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-8"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="favorited-8"
+            src="./assets/Unavailable.png"
             alt=""
           />
-          <img id="popular-9"
-          src=https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-          alt="" />
+          <img
+            class="category-poster"
+            id="favorited-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
         </div>
       </section>
-      <section id="popular">
-        <div id="popular-container">
+
+      <!-- HIGHLY ANTICIPATED -->
+      <section id="anticipated" class="category-section">
+        <h1 class="category-h1">HIGHLY ANTICIPATED</h1>
+        <div id="anticipated-container" class="category-container">
           <img
-            id="popular-0"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-0"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-1"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-1"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-2"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-2"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-3"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-3"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-4"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-4"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-5"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-5"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-6"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-6"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-7"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-7"
+            src="./assets/Unavailable.png"
             alt=""
           />
           <img
-            id="popular-8"
-            src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            class="category-poster"
+            id="anticipated-8"
+            src="./assets/Unavailable.png"
             alt=""
           />
-          <img id="popular-9"
-          src=https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-          alt="" />
+          <img
+            class="category-poster"
+            id="anticipated-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
         </div>
       </section>
+
+      <!-- ACTION -->
+      <section id="action" class="category-section">
+        <h1 class="category-h1">ACTION</h1>
+        <div id="action-container" class="category-container">
+          <img
+            class="category-poster"
+            id="action-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="action-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- ADVENTURE -->
+      <section id="adventure" class="category-section">
+        <h1 class="category-h1">ADVENTURE</h1>
+        <div id="adventure-container" class="category-container">
+          <img
+            class="category-poster"
+            id="adventure-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="adventure-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- ANIMATION -->
+      <section id="animation" class="category-section">
+        <h1 class="category-h1">ANIMATION</h1>
+        <div id="animation-container" class="category-container">
+          <img
+            class="category-poster"
+            id="animation-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="animation-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- COMEDY -->
+      <section id="comedy" class="category-section">
+        <h1 class="category-h1">COMEDY</h1>
+        <div id="comedy-container" class="category-container">
+          <img
+            class="category-poster"
+            id="comedy-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="comedy-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- DOCUMENTARY -->
+      <section id="documentar" class="category-section">
+        <h1 class="category-h1">DOCUMENTARY</h1>
+        <div id="documentary-container" class="category-container">
+          <img
+            class="category-poster"
+            id="documentary-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="documentary-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- ROMANCE -->
+      <section id="romance" class="category-section">
+        <h1 class="category-h1">ROMANCE</h1>
+        <div id="romance-container" class="category-container">
+          <img
+            class="category-poster"
+            id="romance-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="romance-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- WESTERN -->
+      <section id="western" class="category-section">
+        <h1 class="category-h1">WESTERN FILMS</h1>
+        <div id="western-container" class="category-container">
+          <img
+            class="category-poster"
+            id="western-0"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-1"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-2"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-3"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-4"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-5"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-6"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-7"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-8"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+          <img
+            class="category-poster"
+            id="western-9"
+            src="./assets/Unavailable.png"
+            alt=""
+          />
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <a id="footer-p-1" href="#trending"><p>Back to top</p></a>
+      <p id="footer-p-2">2024 Joshua Herrera</p>
     </div>
 
     <!-- POPUP -->
@@ -237,12 +808,13 @@
         <!-- left white side for poster and main info -->
         <div class="popup-poster">
           <!-- blue box for rating, age rating and duration -->
-          <img class="popup-poster-img" src="" alt="" />
+          <div class="poster-img-wrapper">
+            <img class="popup-poster-img" src="" alt="" />
+          </div>
           <div class="main-info">
-            <div class="rating">
-              <img class="rating-img" src="./assets/star.png" alt="" />
-              <p class="rating-p"></p>
-              <p class="imdb">(IMDb)</p>
+            <div class="year">
+              <img class="year-img" src="./assets/year.png" alt="" />
+              <p class="year-p"></p>
             </div>
             <div class="age-rating">
               <img class="age-img" src="./assets/age-rating.png" alt="" />
@@ -259,9 +831,9 @@
         <div class="popup-info">
           <h1 class="title">Kung Fu Panda</h1>
           <div class="info-row-1">
-            <div class="year-container">
-              <p class="year-title">YEAR:</p>
-              <p class="year">2005</p>
+            <div class="release-container">
+              <p class="release-title">RELEASE DATE:</p>
+              <p class="release">2005</p>
             </div>
             <div class="directors-container">
               <p class="directors-title">DIRECTOR:</p>
