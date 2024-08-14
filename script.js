@@ -1,8 +1,8 @@
 // POPUPS
-function initializePopup(poster, movie, i) {
-  // intitialize movie title and year
+function initializePopup(poster, movie, category) {
+  // intitialize movie title and score
   let movieTitle = movie.original_title;
-  let movieYear = movie.release_date.substring(0, 4);
+  let movieScore = movie.vote_average.toFixed(1);
 
   // extract movie release date
   let movieRelease = "";
@@ -150,7 +150,7 @@ function initializePopup(poster, movie, i) {
         document.querySelector(".nav").classList.add("hidden");
         popupPosterImg.src = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`;
         // retrieve placeholders
-        let yearP = document.querySelector(".year-p");
+        let scoreP = document.querySelector(".score-p");
         let ageP = document.querySelector(".age-p");
         let durationP = document.querySelector(".duration-p");
         let title = document.querySelector(".title");
@@ -167,10 +167,10 @@ function initializePopup(poster, movie, i) {
         } else {
           title.innerHTML = movieTitle;
         }
-        if (movieYear == "") {
-          yearP.innerHTML = "N/A";
+        if (movieScore == "") {
+          scoreP.innerHTML = "N/A";
         } else {
-          yearP.innerHTML = movieYear;
+          scoreP.innerHTML = movieScore;
         }
         if (movieRated == "") {
           ageP.innerHTML = "N/A";
@@ -316,7 +316,6 @@ fetch("https://api.trakt.tv/movies/popular", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("popular-container");
             container.removeChild(poster);
           }
@@ -346,7 +345,6 @@ fetch("https://api.trakt.tv/movies/favorited/weekly", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("favorited-container");
             container.removeChild(poster);
           }
@@ -376,7 +374,6 @@ fetch("https://api.trakt.tv/movies/anticipated", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("anticipated-container");
             container.removeChild(poster);
           }
@@ -409,7 +406,6 @@ fetch("https://api.trakt.tv/lists/22484357/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("action-container");
             container.removeChild(poster);
           }
@@ -441,7 +437,6 @@ fetch("https://api.trakt.tv/lists/22032399/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("adventure-container");
             container.removeChild(poster);
           }
@@ -473,7 +468,6 @@ fetch("https://api.trakt.tv/lists/24718087/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("animation-container");
             container.removeChild(poster);
           }
@@ -505,7 +499,6 @@ fetch("https://api.trakt.tv/lists/23587844/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("documentary-container");
             container.removeChild(poster);
           }
@@ -537,7 +530,6 @@ fetch("https://api.trakt.tv/lists/24751039/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("comedy-container");
             container.removeChild(poster);
           }
@@ -569,7 +561,6 @@ fetch("https://api.trakt.tv/lists/24264940/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("romance-container");
             container.removeChild(poster);
           }
@@ -601,7 +592,6 @@ fetch("https://api.trakt.tv/lists/6436692/items", {
             poster.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
             initializePopup(poster, data);
           } else {
-            console.log("here");
             let container = document.getElementById("western-container");
             container.removeChild(poster);
           }

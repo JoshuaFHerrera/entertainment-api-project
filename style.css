@@ -294,14 +294,14 @@ nav {
   border-bottom-left-radius: 20px;
   transform: translate(0px, -80px);
 }
-.year,
+.score,
 .age-rating,
 .duration {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.year-img,
+.score-img,
 .age-img,
 .duration-img {
   height: 30px;
@@ -310,13 +310,22 @@ nav {
 .duration-img {
   padding-right: 15px;
 }
-.year-p,
+.score-p,
 .age-rating p,
 .duration p {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 15px;
   transform: translateX(-5px);
+}
+.score-p {
+  transform: translateX(0px);
+}
+.tmdb {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  transform: translate(-32px, 15px);
 }
 .popup .popup-info {
   width: 600px;
